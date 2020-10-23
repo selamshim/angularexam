@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { FormsModule } from '@angular/forms';
+
 //import { AuthService } from './shared/services/auth.service';
 
 // Firebase
@@ -16,6 +18,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { StudentComponent } from './student/student.component';
+import { StudComponent } from './stud/stud.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +29,14 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
     //AuthService,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    StudentComponent,
+    StudComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig, 'my-app-name'),
     AngularFireAuthModule,
     AngularFirestoreModule,
